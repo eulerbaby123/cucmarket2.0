@@ -2,6 +2,7 @@
 基于python+Django+Mysql的校园二手交易市场
 
 # 运行步骤
+#this is nothing
 需要先安装Python的相关依赖：
 Package           Version
 ----------------- -------
@@ -31,10 +32,11 @@ wheel             0.43.0
 
 进入管理员页面需在URL后面加上/admin，如 http://localhost:8000/admin/
 
-# 系统设计 《《《
+# 系统设计 《《
 ## 功能设计
 ### 任务目标
 ### 功能模块图
 ## 数据库设计
 等 见文档详情
-#水一行字先
+#水一行字先看
+56565
