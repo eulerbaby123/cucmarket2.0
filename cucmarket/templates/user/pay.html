@@ -1,0 +1,132 @@
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>支付页面</title>#}
+{#    <style>#}
+{#        body {#}
+{#            display: flex;#}
+{#            justify-content: center;#}
+{#            align-items: center;#}
+{#            height: 100vh; /* 让内容在整个视口高度垂直居中 */#}
+{#            margin: 0;#}
+{#            text-align: center; /* 文本水平居中 */#}
+{#        }#}
+{#        .content {#}
+{#            text-align: center; /* 文本水平居中 */#}
+{#        }#}
+{#        .payment-info {#}
+{#            margin-bottom: 20px; /* 给文本下方留出一些空间 */#}
+{#        }#}
+{#        .payment-image {#}
+{#            max-width: 100%; /* 图片宽度最大不超过父元素宽度 */#}
+{#            height: auto; /* 图片高度自适应 */#}
+{#        }#}
+{#    </style>#}
+{#</head>#}
+{#<body>#}
+{#    <div class="content">#}
+{#        <h1 class="payment-info">{{ payment_info }}</h1>#}
+{#        <img class="payment-image" src="/static/img/wechat.jpg" alt="支付二维码">#}
+{#    </div>#}
+{#    #添加返回按钮#}
+{# <button onclick="window.location.href='{% url 'cart' %}'">返回</button>#}
+{#</body>#}
+{#</html>#}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>支付页面</title>#}
+{#    <style>#}
+{#        body {#}
+{#            display: flex;#}
+{#            justify-content: center;#}
+{#            align-items: center;#}
+{#            height: 100vh; /* 让内容在整个视口高度垂直居中 */#}
+{#            margin: 0;#}
+{#            text-align: center; /* 文本水平居中 */#}
+{#            flex-direction: column; /* 使内容垂直排列 */#}
+{#        }#}
+{#        .content {#}
+{#            text-align: center; /* 文本水平居中 */#}
+{#            margin-bottom: 10px; /* 给内容和按钮之间留出一些空间 */#}
+{#        }#}
+{#        .payment-info {#}
+{#            margin-bottom: 30px; /* 给文本下方留出更多空间 */#}
+{#        }#}
+{#        .payment-image {#}
+{#            max-width: 80%; /* 图片宽度最大为父元素宽度的80% */#}
+{#            height: auto; /* 图片高度自适应 */#}
+{#        }#}
+{#        .button-container {#}
+{#            text-align: center; /* 按钮水平居中 */#}
+{#            margin-top: 10px; /* 给按钮顶部减少空间 */#}
+{#        }#}
+{#        button {#}
+{#            padding: 10px 20px; /* 按钮内边距 */#}
+{#            font-size: 16px; /* 按钮字体大小 */#}
+{#            background-color: #4CAF50; /* 按钮背景颜色 */#}
+{#            color: white; /* 按钮字体颜色 */#}
+{#            border: none; /* 去掉按钮边框 */#}
+{#            border-radius: 5px; /* 按钮圆角 */#}
+{#            cursor: pointer; /* 鼠标悬停样式 */#}
+{#        }#}
+{#        button:hover {#}
+{#            background-color: #45a049; /* 鼠标悬停按钮背景颜色 */#}
+{#        }#}
+{#    </style>#}
+{#</head>#}
+{#<body>#}
+{#    <div class="content">#}
+{#        <h1 class="payment-info">{{ payment_info }}</h1>#}
+{#        <img class="payment-image" src="/static/img/wechat.jpg" alt="支付二维码">#}
+{#    </div>#}
+{#    <div class="button-container">#}
+{#        <button onclick="window.location.href='{% url 'cart' %}'">返回</button>#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}
+{##}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付页面</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 让内容在整个视口高度垂直居中 */
+            margin: 0;
+            text-align: center; /* 文本水平居中 */
+            flex-direction: column; /* 使内容垂直排列 */
+        }
+        .button-container {
+            text-align: center; /* 按钮水平居中 */
+            margin-top: 10px; /* 给按钮顶部减少空间 */
+        }
+        button {
+            padding: 10px 20px; /* 按钮内边距 */
+            font-size: 16px; /* 按钮字体大小 */
+            background-color: #4CAF50; /* 按钮背景颜色 */
+            color: white; /* 按钮字体颜色 */
+            border: none; /* 去掉按钮边框 */
+            border-radius: 5px; /* 按钮圆角 */
+            cursor: pointer; /* 鼠标悬停样式 */
+        }
+        button:hover {
+            background-color: #45a049; /* 鼠标悬停按钮背景颜色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <h2>总计金额：{{ total_amount }} 元</h2>
+        <button onclick="window.location.href='{% url 'cart' %}'">返回</button>
+    </div>
+</body>
+</html>
+
